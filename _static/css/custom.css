@@ -1,0 +1,92 @@
+/* Keep the Read the Docs typography and navigation used by QuPath. */
+.wy-nav-content {
+  max-width: 1100px;
+}
+
+/* The product mark accompanies real text; the theme still owns navigation. */
+.wy-side-nav-search > a.hf-docs-brand,
+.wy-nav-top > a.hf-docs-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.wy-side-nav-search > a.hf-docs-brand img,
+.wy-nav-top > a.hf-docs-brand img {
+  width: 32px;
+  height: 32px;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  flex: none;
+}
+
+.hf-nav-toggle {
+  float: left;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-size: 1.5rem;
+  line-height: inherit;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid #2980b9;
+  outline-offset: 3px;
+}
+
+.wy-nav-side a:focus-visible,
+.wy-nav-top button:focus-visible {
+  outline-color: #fff;
+  outline-offset: -2px;
+}
+
+.rst-content .wy-table-responsive table td,
+.rst-content .wy-table-responsive table th {
+  white-space: normal;
+  vertical-align: top;
+}
+
+/* Wrap table link labels between words, not inside model names. */
+.rst-content .wy-table-responsive a {
+  overflow-wrap: normal;
+}
+
+/* Long recipe identifiers must fit narrow screens without changing their text. */
+.rst-content code.literal {
+  overflow-wrap: anywhere;
+}
+
+/* Product screenshots use standard Sphinx figures, with a caption and alt text. */
+.rst-content figure.screenshot {
+  margin: 1.5rem 0;
+}
+
+.rst-content figure.screenshot img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border: 1px solid #e1e4e5;
+}
+
+.rst-content figure.screenshot figcaption {
+  margin-top: 0.6rem;
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* The copyable instructions are prose, not source code. */
+.rst-content div.module-creation-prompt pre {
+  padding: 20px;
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}

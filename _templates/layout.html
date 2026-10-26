@@ -1,0 +1,27 @@
+{% extends "!layout.html" %}
+
+{% macro brand() -%}
+  <img src="{{ logo_url }}" width="32" height="32" alt="">
+  <span>{{ project }}</span>
+{%- endmacro %}
+
+{% block sidebartitle %}
+  <a class="hf-docs-brand" href="{{ pathto(root_doc) }}">{{ brand() }}</a>
+  {# Retain the theme's hosted version/language selectors and search. #}
+  {% if READTHEDOCS or DEBUG %}
+    {% if theme_version_selector or theme_language_selector %}
+      <div class="switch-menus">
+        <div class="version-switch"></div>
+        <div class="language-switch"></div>
+      </div>
+    {% endif %}
+  {% endif %}
+  {% include "searchbox.html" %}
+{% endblock %}
+
+{% block mobile_nav %}
+  <button type="button" class="hf-nav-toggle" data-toggle="wy-nav-top" aria-label="Toggle navigation">
+    <span class="fa fa-bars" aria-hidden="true"></span>
+  </button>
+  <a class="hf-docs-brand" href="{{ pathto(root_doc) }}">{{ brand() }}</a>
+{% endblock %}

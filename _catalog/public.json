@@ -1,0 +1,195 @@
+{
+  "fetched_at": "2026-10-26T02:14:31.167775+00:00",
+  "modules": [
+    {
+      "id": "histoforge/rat-seminiferous-tubule-staging",
+      "name": "Da-Mi Kim Rat Tubule Staging (PAS)",
+      "description": "HoVer instance segmentation and 14-class stage or atrophy classification for PAS-stained rat seminiferous tubules.",
+      "tags": [
+        "histoforge",
+        "dinov3-adapter-hovernet",
+        "histopathology",
+        "rat",
+        "testis",
+        "pas",
+        "instance-segmentation",
+        "image-classification"
+      ],
+      "private": false,
+      "revision": "91bc2eb718551df8f5905ea53fad0dcc7788663a"
+    },
+    {
+      "id": "histoforge/deepliif-ki67-nuclei",
+      "name": "DeepLIIF Ki-67 Nuclei (IHC)",
+      "description": "Joint Ki-67-positive/negative nucleus segmentation, classification, counting, and positive-index aggregation.",
+      "tags": [
+        "histoforge",
+        "dinov3-adapter-cellpose",
+        "pathology",
+        "immunohistochemistry",
+        "ki67",
+        "human",
+        "instance-segmentation",
+        "image-classification"
+      ],
+      "private": false,
+      "revision": "d3ef154be45fe87a015432b57381c4af3059cfee"
+    },
+    {
+      "id": "histoforge/starter-dinov3-cellpose",
+      "name": "DINOv3 Cellpose Starter",
+      "description": "DINOv3 Cellpose Starter for training on your own annotations.",
+      "tags": [
+        "starter",
+        "histoforge",
+        "cellpose",
+        "histopathology"
+      ],
+      "private": false,
+      "revision": "b6d6184d12cfc5985381d39432aec4507faa789f"
+    },
+    {
+      "id": "histoforge/starter-dinov3-semantic",
+      "name": "DINOv3 Dense Semantic Starter",
+      "description": "DINOv3 Dense Semantic Starter for training on your own annotations.",
+      "tags": [
+        "starter",
+        "histoforge",
+        "semantic",
+        "histopathology"
+      ],
+      "private": false,
+      "revision": "52b4c2f6977e2286e7acb3d1cfc25ce33e1b8ac5"
+    },
+    {
+      "id": "histoforge/starter-dinov3-hovernet",
+      "name": "DINOv3 HoVer Starter",
+      "description": "DINOv3 HoVer Starter for training on your own annotations.",
+      "tags": [
+        "starter",
+        "histoforge",
+        "hovernet",
+        "histopathology"
+      ],
+      "private": false,
+      "revision": "27900ed675d63b5cd58eb6324832d1842a7db0c1"
+    },
+    {
+      "id": "histoforge/starter-he12-cellpose",
+      "name": "H&E-12 Cellpose Starter",
+      "description": "H&E-12 Cellpose Starter for training on your own annotations.",
+      "tags": [
+        "starter",
+        "histoforge",
+        "cellpose",
+        "histopathology"
+      ],
+      "private": false,
+      "revision": "d960158fc603ec1c49fcf67f2ebea4a2f9d82ab3"
+    },
+    {
+      "id": "histoforge/starter-he12-semantic",
+      "name": "H&E-12 Dense Semantic Starter",
+      "description": "H&E-12 Dense Semantic Starter for training on your own annotations.",
+      "tags": [
+        "starter",
+        "histoforge",
+        "semantic",
+        "histopathology"
+      ],
+      "private": false,
+      "revision": "ecc9f9ab653631531413adc696b605e7adb06d88"
+    },
+    {
+      "id": "histoforge/starter-he12-hovernet",
+      "name": "H&E-12 HoVer Starter",
+      "description": "H&E-12 HoVer Starter for training on your own annotations.",
+      "tags": [
+        "starter",
+        "histoforge",
+        "hovernet",
+        "histopathology"
+      ],
+      "private": false,
+      "revision": "adfa69381c168642190756aeb42edc206c418b79"
+    },
+    {
+      "id": "histoforge/ignite-nsclc-he-tissue",
+      "name": "IGNITE NSCLC Tissue Segmentation (H&E)",
+      "description": "Tissue-compartment segmentation and area measurements in H&E-stained non-small cell lung cancer.",
+      "tags": [
+        "histoforge",
+        "histopathology",
+        "semantic-segmentation",
+        "dinov3"
+      ],
+      "private": false,
+      "revision": "71e238d4b9ac3f926c6256d3fd7cc81aad8c5edb"
+    },
+    {
+      "id": "histoforge/lizard-colon-nuclei",
+      "name": "Lizard Colon Nuclei (H&E)",
+      "description": "Segment and classify six nucleus types in colon H&E images.",
+      "tags": [
+        "histoforge",
+        "dinov3-adapter-cellpose",
+        "pathology",
+        "human",
+        "colon",
+        "instance-segmentation",
+        "image-classification"
+      ],
+      "private": false,
+      "revision": "91d20b804b21e0476a5805b5589cc407a858fcc6"
+    },
+    {
+      "id": "histoforge/nucls-breast-nuclei",
+      "name": "NuCLS Breast Nuclei (H&E)",
+      "description": "Nucleus instance segmentation and seven-class classification in human breast-carcinoma H&E fields.",
+      "tags": [
+        "histoforge",
+        "dinov3-adapter-cellpose",
+        "pathology",
+        "human",
+        "breast",
+        "he",
+        "instance-segmentation",
+        "image-classification"
+      ],
+      "private": false,
+      "revision": "01944181a7b7aa0d1736b2ce480856ce79528afb"
+    },
+    {
+      "id": "histoforge/puma-melanoma-nuclei",
+      "name": "PUMA Melanoma Nuclei (H&E)",
+      "description": "Melanoma nucleus segmentation, ten-class classification and nucleus counts.",
+      "tags": [
+        "histoforge",
+        "dinov3-adapter-cellpose",
+        "pathology",
+        "human",
+        "melanoma",
+        "instance-segmentation",
+        "image-classification"
+      ],
+      "private": false,
+      "revision": "0973cb3c27ddf9d3b455722c3180a46eae5a55e2"
+    },
+    {
+      "id": "histoforge/rings-prostate-gland-and-tumor",
+      "name": "RINGS Prostate Gland and Tumor Regions (H&E)",
+      "description": "Independent dense-semantic gland and tumour-region segmentation for H&E prostate fields.",
+      "tags": [
+        "histoforge",
+        "dinov3-adapter-semantic",
+        "pathology",
+        "prostate",
+        "human",
+        "he",
+        "semantic-segmentation"
+      ],
+      "private": false,
+      "revision": "9a3c6d05a21d1c0fe2a08a5f03a5eea2c393f96a"
+    }
+  ]
+}

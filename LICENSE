@@ -1,0 +1,36 @@
+HistoForge documentation licensing
+
+Copyright (c) 2026 HistoForge contributors.
+
+Documentation — CC BY 4.0
+-------------------------
+Original prose in docs/, README.md, CONTRIBUTING.md, BRANDING.md,
+_static/prompts/ and the website's explanatory text is licensed under the
+Creative Commons Attribution 4.0 International licence.
+See LICENSE-CC-BY-4.0.txt or https://creativecommons.org/licenses/by/4.0/.
+
+Credit HistoForge contributors, link to the source and licence, and indicate
+changes as required by that licence. Code examples use the software licence
+below, not CC BY 4.0.
+
+Software — MIT
+--------------
+Original website and build code, configuration, tests and code examples
+(including examples embedded in the guides) are licensed under the MIT licence.
+See LICENSE-MIT.txt. Explanatory prose retains the documentation licence above.
+
+Images, fonts and other material
+-------------------------------
+The licences above do not cover images, screenshots, fonts or third-party
+material. Keep their existing notices and terms. See THIRD_PARTY_NOTICES.md,
+docs/reference/image-credits.md and the licence files accompanying each asset.
+For example, the Lizard gallery image remains under CC BY-NC-SA 4.0.
+
+HistoForge logos, mascot and brand artwork in branding/ and
+_static/images/brand/ are excluded from both licences; all rights are reserved
+unless separately stated. No trademark rights or permission to imply
+HistoForge endorsement are granted.
+
+These grants apply only to material HistoForge contributors have the right to
+license. They do not replace third-party licences or restrict uses permitted
+by law.

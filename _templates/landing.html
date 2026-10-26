@@ -1,0 +1,249 @@
+{% macro icon(name) -%}
+<svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-{{ name }}"></use></svg>
+{%- endmacro %}
+{% macro gallery_image(filename, width, height, description) -%}
+{% set image_url = pathto('_static/images/gallery/' ~ filename, 1) %}
+<a class="capture-image" href="{{ image_url }}" aria-label="Open full-size image: {{ description }}">
+  <img src="{{ image_url }}?v={{ landing_asset_version }}" width="{{ width }}" height="{{ height }}" alt="{{ description }}">
+</a>
+{%- endmacro %}
+{% set features = [
+  {"id": "cells", "title": "Segment and classify cells", "capture": "Cell analysis"},
+  {"id": "structures", "title": "Segment and classify tissue structures", "capture": "Tissue structures"},
+  {"id": "regions", "title": "Segment and classify tissue regions", "capture": "Tissue regions"},
+  {"id": "within-structures", "title": "Run models within detected structures", "capture": "Analysis within detected structures"},
+  {"id": "whole-slide", "title": "Whole slide inference", "capture": "Whole slide inference"},
+  {"id": "metrics", "title": "Calculate metrics", "capture": "Measurements"},
+  {"id": "training", "title": "Train and fine-tune models", "capture": "Model training"},
+  {"id": "workflows", "title": "Create module workflows", "capture": "Module workflows"},
+  {"id": "community", "title": "Download community modules and share your own", "capture": "Community modules"}
+] %}
+{% macro placeholder(title) -%}
+<div class="capture-placeholder" role="img" aria-label="Screenshot placeholder: {{ title }}">
+  <svg class="capture-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+    <path d="M17 9H9v8m22-8h8v8M9 31v8h8m22-8v8h-8" />
+    <path d="M19 24h10m-5-5v10" />
+  </svg>
+  <span class="capture-title">{{ title }}</span>
+  <span class="capture-pending">Screenshot placeholder</span>
+</div>
+{%- endmacro %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An open-source platform for histology image analysis. Use community models to identify cells and tissue structures, get measurements, and train and share models using your own annotations. Analysis and training run in your cloud account.">
+  <title>HistoForge — AI for histology, in QuPath</title>
+  <link rel="icon" type="image/png" href="{{ favicon_url }}">
+  <link rel="preload" href="{{ pathto('_static/fonts/sourcesans3-latin.woff2', 1) }}" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="{{ pathto('_static/css/landing.css', 1) }}?v={{ landing_asset_version }}">
+  <script type="module" src="{{ pathto('_static/landing.js', 1) }}?v={{ landing_asset_version }}"></script>
+  <script type="module" src="{{ pathto('_static/gallery-viewer.js', 1) }}?v={{ landing_asset_version }}"></script>
+  <script type="module" src="{{ pathto('_static/modules.js', 1) }}?v={{ landing_asset_version }}"></script>
+  {% if review_enabled %}
+  <link rel="stylesheet" href="{{ pathto('_static/review.css', 1) }}">
+  <script type="module" src="{{ pathto('_static/review.js', 1) }}"></script>
+  <link rel="stylesheet" href="{{ pathto('_static/landing-design.css', 1) }}?v={{ landing_asset_version }}">
+  <script type="module" src="{{ pathto('_static/landing-design.js', 1) }}?v={{ landing_asset_version }}"></script>
+  {% endif %}
+</head>
+<body>
+  <svg class="icon-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="icon-book" viewBox="0 0 24 24">
+      <path d="M12 6v15m0-15C9 3.5 5 3.5 2 4v15c3-.5 7-.5 10 2 3-2.5 7-2.5 10-2V4c-3-.5-7-.5-10 2Z" />
+    </symbol>
+    <symbol id="icon-arrow-up-right" viewBox="0 0 24 24">
+      <path d="m7 17 10-10M7 7h10v10" />
+    </symbol>
+    <symbol id="icon-discuss" viewBox="0 0 24 24">
+      <path d="M20 15a3 3 0 0 1-3 3H9l-5 3v-6a7 7 0 0 1-1-4V8a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v3m-14-1h10m-10 4h6" />
+    </symbol>
+    <symbol id="icon-download" viewBox="0 0 24 24">
+      <path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5" />
+    </symbol>
+    <symbol id="icon-lock" viewBox="0 0 24 24">
+      <rect x="5" y="10" width="14" height="11" rx="2" />
+      <path d="M8 10V7a4 4 0 0 1 8 0v3m-4 5v2" />
+    </symbol>
+  </svg>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="page-shell" itemprop="articleBody">
+    <header class="site-header">
+      <a class="wordmark" href="{{ pathto('index') }}" aria-label="HistoForge home">
+        <img src="{{ logo_url }}" width="32" height="32" alt="">
+        <span>HistoForge</span>
+      </a>
+      <nav class="site-navigation" aria-label="Main navigation">
+        <a href="https://forum.image.sc/" title="Discuss" aria-label="Discuss on the Image.sc Forum">
+          {{ icon('discuss') }}<span>Discuss</span>
+        </a>
+        <a href="https://github.com/histoforge" title="Contribute" aria-label="Contribute on GitHub">
+          <img class="brand-icon" src="{{ pathto('_static/images/github.svg', 1) }}" width="20" height="20" alt="">
+          <span>Contribute</span>
+        </a>
+        <a href="https://huggingface.co/models?other=histoforge" title="Modules library" aria-label="HistoForge modules library on Hugging Face">
+          <img class="brand-icon" src="{{ pathto('_static/images/huggingface.svg', 1) }}?v={{ landing_asset_version }}" width="20" height="20" alt="">
+          <span>Modules library</span>
+        </a>
+        <a class="documentation-link" href="{{ pathto('docs/index') | replace('index.html', '') }}" title="Documentation" aria-label="Documentation">
+          {{ icon('book') }}<span>Documentation</span>
+        </a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="introduction" aria-labelledby="intro-heading">
+        <h1 id="intro-heading">AI for histology, <span>in QuPath.</span></h1>
+        <p class="introduction-copy">An open-source platform for histology image analysis.
+          Use community models to identify cells and tissue structures, get measurements, and train
+          and share models using your own annotations. Analysis and training run in your cloud account.</p>
+      </section>
+
+      {% if landing_download_url or review_enabled %}
+      <div class="release-download">
+        {% if landing_download_url %}
+        <a class="download-link" href="{{ landing_download_url | e }}">{{ icon('download') }}Download HistoForge</a>
+        {% else %}
+        <button class="download-link" type="button" disabled aria-describedby="download-pending">{{ icon('download') }}Download HistoForge</button>
+        <span class="draft-label" id="download-pending">Release link pending</span>
+        {% endif %}
+      </div>
+      {% endif %}
+
+      <section class="contact" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Contribute to HistoForge</h2>
+        <p><a href="{{ pathto('docs/training/publish') }}">Publish a module</a> directly from QuPath.
+          To discuss contributing a dataset or model, email
+          <a href="mailto:histoforge.contact@gmail.com">histoforge.contact@gmail.com</a>.</p>
+      </section>
+
+      <section class="workflow" aria-labelledby="workflow-heading">
+        <h2 class="visually-hidden" id="workflow-heading">Explore HistoForge</h2>
+        <div class="workflow-viewport" role="region" aria-labelledby="workflow-heading">
+          <div class="workflow-stage">
+            <div class="workflow-views">
+              {% for feature in features %}
+              <figure class="workflow-panel" id="view-{{ feature.id }}" aria-labelledby="title-{{ feature.id }}" tabindex="-1">
+                <figcaption class="capture-heading"><h3 id="title-{{ feature.id }}">{{ feature.title }}</h3></figcaption>
+                <div class="capture-frame">
+                  {% if feature.id == 'cells' %}
+                  {{ gallery_image('lizard-dpath-36-nuclei.png', 885, 885, 'Colon tissue with individual nuclei outlined and coloured as epithelial, lymphocyte, plasma, connective tissue or eosinophil.') }}
+                  {% elif feature.id == 'structures' %}
+                  {{ gallery_image('da-mi-kim-tissue-structures.png', 2048, 2048, 'Rat testis tissue with detected tubule cross-sections outlined and coloured by their predicted stage.') }}
+                  {% elif feature.id == 'regions' %}
+                  {{ gallery_image('rings-tissue-regions.png', 1000, 1000, 'Prostate tissue with predicted gland and tumour regions. Pink marks tumour-only regions, orange marks overlapping gland and tumour regions, and blue marks gland-only regions.') }}
+                  {% elif feature.id == 'within-structures' %}
+                  {{ gallery_image('da-mi-kim-within-structures.png', 1536, 1536, 'Rat testis tissue with several tubules outlined in green, predicted nuclei filled in red and lumens in amber. Overlays are limited to the detected tubules.') }}
+                  {% elif feature.id == 'whole-slide' %}
+                  {{ gallery_image('cmu-1-whole-slide-inference.png', 1262, 784, 'QuPath showing CMU-1.svs with one manually drawn tissue region highlighted, beside HistoForge set to Annotations by class, Tissue region, with four matching regions. No model is assigned.') }}
+                  {% elif feature.id == 'metrics' %}
+                  {{ gallery_image('histoforge-metrics.png', 1714, 1724, "HistoForge's Project tab and measurement table showing tubule area, minor and major axes, and circularity in a demo analysis.") }}
+                  {% elif feature.id == 'training' %}
+                  {{ gallery_image('histoforge-training.png', 2282, 1928, "HistoForge's Train tab with DeepLIIF selected, model details and split controls, before training regions or a data split have been prepared.") }}
+                  {% elif feature.id == 'community' %}
+                  {{ gallery_image('histoforge-modules.png', 2282, 1928, "HistoForge's Modules tab with installed analysis and starter modules, and documentation for the selected DeepLIIF Ki-67 module.") }}
+                  {% elif feature.id == 'workflows' %}
+                  {% include 'workflow-diagram.html' %}
+                  {% else %}
+                  {# Replace with an approved real capture; see SCREENSHOTS.md. #}
+                  {{ placeholder(feature.capture) }}
+                  {% endif %}
+                </div>
+                {% if feature.id == 'cells' %}
+                <p class="capture-credit">Lizard · Graham et al. · <a href="{{ pathto('docs/reference/image-credits') }}#lizard-cells">Image credit and overlay key</a></p>
+                {% elif feature.id == 'structures' %}
+                <p class="capture-credit">Da-Mi Kim · <a href="{{ pathto('docs/reference/image-credits') }}#da-mi-kim-tissue-structures">Image credit</a></p>
+                {% elif feature.id == 'regions' %}
+                <p class="capture-credit">RINGS · Salvi et al. · <a href="{{ pathto('docs/reference/image-credits') }}#rings-tissue-regions">Image credit and overlay key</a></p>
+                {% elif feature.id == 'within-structures' %}
+                <p class="capture-credit">Da-Mi Kim · <a href="{{ pathto('docs/reference/image-credits') }}#da-mi-kim-within-structures">Image credit and overlay key</a></p>
+                {% elif feature.id == 'whole-slide' %}
+                <p class="capture-credit">CMU-1 · <a href="{{ pathto('docs/reference/image-credits') }}#whole-slide-inference">Image credit and annotation context</a></p>
+                {% elif feature.id == 'metrics' %}
+                <p class="capture-credit">Da-Mi Kim · <a href="{{ pathto('docs/reference/image-credits') }}#da-mi-kim-tissue-structures">Image credit and measurement context</a></p>
+                {% elif feature.id == 'training' %}
+                <p class="capture-credit">HistoForge · <a href="{{ pathto('docs/reference/image-credits') }}#training-interface">Interface capture</a></p>
+                {% elif feature.id == 'community' %}
+                <p class="capture-credit">HistoForge · <a href="{{ pathto('docs/reference/image-credits') }}#module-library">Interface capture</a></p>
+                {% endif %}
+              </figure>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {% if landing_modules %}
+      {% set module_page_size = 6 %}
+      {% set module_page_count = (landing_modules | length - 1) // module_page_size + 1 %}
+      <section class="module-catalog" id="selected-modules" aria-labelledby="modules-heading" data-page-size="{{ module_page_size }}">
+        <header class="modules-header">
+          <h2 id="modules-heading">Selected modules</h2>
+          <a class="modules-source" href="https://huggingface.co/histoforge">
+            <img class="brand-icon" src="{{ pathto('_static/images/huggingface.svg', 1) }}" width="20" height="20" alt="">
+            <span>On Hugging Face</span>{{ icon('arrow-up-right') }}
+          </a>
+        </header>
+        <p class="modules-discovery">For other modules, browse the
+          <a href="https://huggingface.co/models?other=histoforge">histoforge tag on Hugging Face</a>.</p>
+        <div class="module-list" id="module-list" style="--module-rows: {{ (module_page_size + 1) // 2 }}; --module-rows-narrow: {{ module_page_size }};">
+          {% for page in landing_modules | batch(module_page_size) %}
+          <ul class="module-page" aria-label="Modules page {{ loop.index }}">
+            {% for module in page %}
+            <li class="module-card{% if module.planned %} module-card-planned{% endif %}"{% if module.planned %} tabindex="-1"{% endif %}>
+              {% if module.planned %}
+              <div class="module-card-heading">
+                <h3>{{ module.name | e }}</h3>
+                <span class="module-status" role="img" aria-label="Not yet available">{{ icon('lock') }}</span>
+              </div>
+              {% else %}
+              <h3><a href="{{ ('https://huggingface.co/' ~ module.id) | e }}">{{ module.name | e }}{{ icon('arrow-up-right') }}</a></h3>
+              {% endif %}
+              <p>{{ module.description | e }}</p>
+              {% set display_tags = module.datasets if module.planned else module.tags | reject('equalto', 'histoforge') | list %}
+              {% if display_tags %}
+              <ul class="module-tags" aria-label="{% if module.planned %}Proposed source datasets{% else %}Hugging Face tags{% endif %}">
+                {% for tag in display_tags %}
+                <li>{{ tag | e }}</li>
+                {% endfor %}
+              </ul>
+              {% endif %}
+            </li>
+            {% endfor %}
+          </ul>
+          {% endfor %}
+        </div>
+        {% if module_page_count > 1 %}
+        <nav class="module-pagination" aria-label="Selected modules pages" hidden>
+          <button type="button" data-page-previous aria-controls="module-list">Previous</button>
+          {% for page in range(module_page_count) %}
+          <button type="button" data-module-page="{{ page }}" aria-label="Page {{ page + 1 }}" aria-controls="module-list">{{ page + 1 }}</button>
+          {% endfor %}
+          <button type="button" data-page-next aria-controls="module-list">Next</button>
+          <span class="visually-hidden" role="status" aria-live="polite" aria-atomic="true"></span>
+        </nav>
+        {% endif %}
+      </section>
+      {% endif %}
+    </main>
+
+    <footer class="site-footer">
+      <p>To reference HistoForge in scientific publications, see
+        <a href="{{ pathto('docs/reference/citing') }}">How to cite HistoForge</a>.</p>
+      <p class="intended-use">HistoForge is not intended for clinical, diagnostic or therapeutic purposes.</p>
+    </footer>
+  </div>
+  <dialog class="gallery-viewer" aria-labelledby="gallery-viewer-title">
+    <div class="gallery-viewer-content">
+      <button type="button" class="gallery-viewer-close" aria-label="Close image" autofocus>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m18 6-12 12M6 6l12 12"/></svg>
+      </button>
+      <h2 id="gallery-viewer-title" class="visually-hidden"></h2>
+      <img class="gallery-viewer-image" alt="">
+      <p class="gallery-viewer-error" role="status" hidden>Image could not be loaded. Close and try again.</p>
+    </div>
+  </dialog>
+</body>
+</html>

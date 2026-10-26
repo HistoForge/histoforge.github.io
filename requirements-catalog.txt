@@ -1,0 +1,2 @@
+# Optional: refreshing HF metadata, not building the website.
+huggingface-hub==2.0.0
