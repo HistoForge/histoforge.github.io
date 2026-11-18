@@ -1,0 +1,15 @@
+{% if google_analytics_id and not review_enabled %}
+<p class="website-privacy">
+  <a href="{{ pathto('privacy') }}">Website privacy</a>
+  <button type="button" data-analytics-settings hidden>Analytics settings</button>
+</p>
+<section class="analytics-notice" aria-label="Website analytics" hidden
+         data-measurement-id="{{ google_analytics_id | e }}" data-origin="{{ analytics_origin | e }}">
+  <p>Allow Google Analytics to measure your visit?
+    <a href="{{ pathto('privacy') }}">Details</a></p>
+  <div class="analytics-actions">
+    <button type="button" data-analytics-choice="denied">Decline</button>
+    <button type="button" data-analytics-choice="granted">Allow analytics</button>
+  </div>
+</section>
+{% endif %}

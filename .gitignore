@@ -1,0 +1,11 @@
+_build/
+.venv/
+.DS_Store
+__pycache__/
+_catalog/private.json
+.agents/
+AGENTS.md
+AUTHORING.md
+PUBLISHING_CHECKLIST.md
+REVIEW.md
+SCREENSHOTS.md

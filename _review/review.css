@@ -1,0 +1,52 @@
+.hf-review {
+  font: 14px/1.5 Lato, "Helvetica Neue", Arial, sans-serif;
+  color: #292929;
+}
+.hf-review [hidden] { display: none !important; }
+.hf-review button {
+  font: inherit;
+  color: #292929;
+  background: #fff;
+  border: 1px solid #b9b9b9;
+  border-radius: 4px;
+  padding: 7px 11px;
+  cursor: pointer;
+}
+.hf-review button:hover { background: #f2f4f6; }
+.hf-review button:focus-visible,
+.hf-review textarea:focus-visible { outline: 2px solid #2980b9; outline-offset: 2px; }
+.hf-review-toolbar { position: fixed; right: 20px; bottom: 18px; z-index: 1000; }
+.hf-review-add { position: fixed; z-index: 1002; box-shadow: 0 2px 8px #0002; }
+.hf-review-panel {
+  position: fixed;
+  inset: 0 0 0 auto;
+  width: min(380px, 100%);
+  padding: 20px;
+  background: #fff;
+  border-left: 1px solid #d8d8d8;
+  box-shadow: -4px 0 16px #0001;
+  z-index: 1001;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+.hf-review-heading { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.hf-review-heading h2 { margin: 0; font: 600 20px/1.4 Lato, sans-serif; }
+.hf-review-hint { color: #5b5b5b; font-size: 13px; margin: 12px 0; }
+.hf-review-status { margin: 12px 0; }
+.hf-review-status:empty { display: none; }
+.hf-review-form { border-block: 1px solid #ddd; padding: 16px 0; margin: 16px 0; }
+.hf-review-form blockquote { margin: 0 0 12px; border-left: 3px solid #d6af43; padding-left: 12px; max-height: 140px; overflow: auto; white-space: pre-wrap; overflow-wrap: anywhere; }
+.hf-review-form label { display: block; margin-bottom: 6px; }
+.hf-review-form textarea { width: 100%; font: inherit; padding: 9px; border: 1px solid #999; border-radius: 4px; resize: vertical; min-height: 100px; }
+.hf-review-actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+.hf-review-note { border-top: 1px solid #ddd; margin-top: 18px; padding-top: 4px; }
+.hf-review-quote { display: block; width: 100%; text-align: left; white-space: pre-wrap; overflow-wrap: anywhere; max-height: 160px; overflow: auto; border-left: 3px solid #d6af43 !important; }
+.hf-review-body { white-space: pre-wrap; overflow-wrap: anywhere; margin: 12px 0; }
+::highlight(hf-review-notes) { background-color: #ffe8a0; color: #222; }
+::highlight(hf-review-active) { background-color: #ffcf54; color: #111; }
+@media (max-width: 480px) {
+  .hf-review-panel { padding: 16px; }
+  .hf-review button { min-height: 44px; }
+  .hf-review-form textarea { font-size: 16px; }
+}
+@media print { .hf-review { display: none; } }

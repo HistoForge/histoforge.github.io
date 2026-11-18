@@ -1,0 +1,4 @@
+{% if google_analytics_id and not review_enabled %}
+<link rel="stylesheet" href="{{ pathto('_static/css/analytics.css', 1) }}?v={{ landing_asset_version }}">
+<script type="module" src="{{ pathto('_static/analytics.js', 1) }}?v={{ landing_asset_version }}"></script>
+{% endif %}

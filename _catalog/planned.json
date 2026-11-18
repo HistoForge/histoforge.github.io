@@ -1,0 +1,146 @@
+[
+  {
+    "name": "Pan-tissue nuclei",
+    "show_last": true,
+    "description": "Nucleus segmentation and classification across tissue types.",
+    "datasets": ["PanNuke"]
+  },
+  {
+    "name": "Colon nuclei",
+    "show_last": true,
+    "description": "Nucleus segmentation and classification into six cell types in colon tissue.",
+    "datasets": ["Lizard", "CoNIC"]
+  },
+  {
+    "name": "Multi-organ nuclei",
+    "show_last": true,
+    "description": "Nucleus segmentation and classification in breast, kidney, lung and prostate tissue.",
+    "datasets": ["MoNuSAC"]
+  },
+  {
+    "name": "CoNSeP colon nuclei",
+    "show_last": true,
+    "description": "Nucleus segmentation and classification in colorectal cancer tissue.",
+    "datasets": ["CoNSeP"]
+  },
+  {
+    "name": "Melanoma nuclei",
+    "show_last": true,
+    "description": "Nucleus segmentation and cell-type classification in melanoma tissue.",
+    "datasets": ["PUMA"]
+  },
+  {
+    "name": "Gastric nuclei",
+    "show_last": true,
+    "description": "Nucleus segmentation and classification in gastric tissue.",
+    "datasets": ["GlySAC"]
+  },
+  {
+    "name": "Breast nuclei",
+    "show_last": true,
+    "description": "Nucleus segmentation and cell-type classification in breast cancer tissue.",
+    "datasets": ["NuCLS"],
+    "module_refs": ["histoforge/nucls-breast-nuclei"]
+  },
+  {
+    "name": "Kidney glomeruli",
+    "description": "Glomerulus segmentation and morphometric measurements in kidney tissue.",
+    "datasets": ["Orbit", "Stritt"]
+  },
+  {
+    "name": "Glomerulosclerosis",
+    "description": "Glomerulus segmentation and classification by sclerosis status.",
+    "datasets": ["AIDPATH", "HuBMAP"]
+  },
+  {
+    "name": "Liver zonation",
+    "description": "Portal-field and central-vein detection for spatial analysis of liver zones.",
+    "datasets": ["PF/CV"]
+  },
+  {
+    "name": "Liver lesions and mitosis",
+    "description": "Necrosis-region analysis and detection of mitotic and injured cells.",
+    "datasets": ["TG-GATEs"]
+  },
+  {
+    "name": "Prostate glands and tumour regions",
+    "description": "Gland and tumour-region segmentation in prostate tissue.",
+    "datasets": ["RINGS"],
+    "module_refs": ["histoforge/rings-prostate-gland-and-tumor"]
+  },
+  {
+    "name": "Gleason grading",
+    "description": "Gleason-pattern analysis in prostate tissue.",
+    "datasets": ["Arvaniti", "SICAPv2", "PANDA"]
+  },
+  {
+    "name": "Breast tissue regions",
+    "description": "Tissue-compartment segmentation in breast cancer images.",
+    "datasets": ["BCSS"]
+  },
+  {
+    "name": "Lymph-node metastasis",
+    "description": "Tumour-region detection and segmentation in lymph-node sections.",
+    "datasets": ["CAMELYON16", "CAMELYON17"]
+  },
+  {
+    "name": "Colon tissue regions",
+    "description": "Tissue-region classification and segmentation in colorectal images.",
+    "datasets": ["HunCRC", "EBHI-Seg"]
+  },
+  {
+    "name": "Cross-species mitosis",
+    "description": "Mitotic-figure detection and counting in human and animal tissue.",
+    "datasets": ["MIDOG++", "CCMCT", "CMC"]
+  },
+  {
+    "name": "Tumour-infiltrating lymphocytes",
+    "description": "Lymphocyte detection and density measurements within tumour and stroma regions.",
+    "datasets": ["TiGER"]
+  },
+  {
+    "name": "Ki-67 index",
+    "show_last": true,
+    "description": "Positive and negative nucleus detection, counting and proliferation-index measurement.",
+    "datasets": ["BCData", "DeepLIIF"],
+    "module_refs": ["histoforge/deepliif-ki67-nuclei"]
+  },
+  {
+    "name": "PD-L1 scoring",
+    "description": "Tissue and cell analysis for tumour proportion and combined positive scores (TPS/CPS).",
+    "datasets": ["IGNITE"]
+  },
+  {
+    "name": "Canine skin tumours",
+    "description": "Tissue-region segmentation and tumour classification in canine skin.",
+    "datasets": ["CATCH"]
+  },
+  {
+    "name": "Bronchoalveolar lavage cytology",
+    "description": "Cell detection and assessment of hemosiderin in bronchoalveolar lavage samples.",
+    "datasets": ["P-Hem"]
+  },
+  {
+    "name": "Canine and feline lymphoma",
+    "show_last": true,
+    "description": "Nucleus analysis in canine and feline lymphoma images.",
+    "datasets": ["FH-OOe"]
+  },
+  {
+    "name": "Ovarian follicles",
+    "description": "Follicle detection, classification and counting in ovarian tissue.",
+    "datasets": ["Blot", "MOTHER"]
+  },
+  {
+    "name": "Lung cancer tissue regions",
+    "description": "Tissue-compartment segmentation and area measurements in non-small cell lung cancer.",
+    "datasets": ["IGNITE"],
+    "module_refs": ["histoforge/ignite-nsclc-he-tissue"]
+  },
+  {
+    "name": "Rat seminiferous tubule staging",
+    "description": "Tubule segmentation and stage classification in PAS-stained rat testis sections.",
+    "datasets": ["Da-Mi Kim"],
+    "module_refs": ["histoforge/rat-seminiferous-tubule-staging"]
+  }
+]

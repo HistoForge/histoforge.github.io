@@ -1,0 +1,62 @@
+/* Self-hosted Latin fonts; copyright and OFL notices accompany each family. */
+@font-face { font-family: "IBM Plex Sans"; font-style: normal; font-weight: 400 650; font-display: swap; src: url("fonts/ibmplexsans-latin.woff2") format("woff2"); }
+@font-face { font-family: "Public Sans"; font-style: normal; font-weight: 400 650; font-display: swap; src: url("fonts/publicsans-latin.woff2") format("woff2"); }
+@font-face { font-family: "Libre Franklin"; font-style: normal; font-weight: 400 650; font-display: swap; src: url("fonts/librefranklin-latin.woff2") format("woff2"); }
+@font-face { font-family: "Work Sans"; font-style: normal; font-weight: 400 650; font-display: swap; src: url("fonts/worksans-latin.woff2") format("woff2"); }
+@font-face { font-family: "Source Serif 4"; font-style: normal; font-weight: 400 650; font-display: swap; src: url("fonts/sourceserif4-latin.woff2") format("woff2"); }
+@font-face { font-family: "Hanken Grotesk"; font-style: normal; font-weight: 400 650; font-display: swap; src: url("fonts/hankengrotesk-latin.woff2") format("woff2"); }
+@font-face { font-family: "Instrument Sans"; font-style: normal; font-weight: 400 650; font-display: swap; src: url("fonts/instrumentsans-latin.woff2") format("woff2"); }
+@font-face { font-family: "Lato"; font-style: normal; font-weight: 400; font-display: swap; src: url("fonts/lato-400-latin.woff2") format("woff2"); }
+@font-face { font-family: "Lato"; font-style: normal; font-weight: 700; font-display: swap; src: url("fonts/lato-700-latin.woff2") format("woff2"); }
+@font-face { font-family: "Commissioner"; font-style: normal; font-weight: 400 650; font-display: swap; src: url("fonts/commissioner-latin.woff2") format("woff2"); }
+@font-face { font-family: "Schibsted Grotesk"; font-style: normal; font-weight: 400 650; font-display: swap; src: url("fonts/schibstedgrotesk-latin.woff2") format("woff2"); }
+@font-face { font-family: "Figtree"; font-style: normal; font-weight: 400 650; font-display: swap; src: url("fonts/figtree-latin.woff2") format("woff2"); }
+@font-face { font-family: "Albert Sans"; font-style: normal; font-weight: 400 650; font-display: swap; src: url("fonts/albertsans-latin.woff2") format("woff2"); }
+@font-face { font-family: "Noto Sans"; font-style: normal; font-weight: 400 650; font-display: swap; src: url("fonts/notosans-latin.woff2") format("woff2"); }
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 400 650; font-display: swap; src: url("fonts/opensans-latin.woff2") format("woff2"); }
+@font-face { font-family: "Barlow"; font-style: normal; font-weight: 400; font-display: swap; src: url("fonts/barlow-400-latin.woff2") format("woff2"); }
+@font-face { font-family: "Barlow"; font-style: normal; font-weight: 500; font-display: swap; src: url("fonts/barlow-500-latin.woff2") format("woff2"); }
+@font-face { font-family: "Barlow"; font-style: normal; font-weight: 600; font-display: swap; src: url("fonts/barlow-600-latin.woff2") format("woff2"); }
+@font-face { font-family: "Archivo"; font-style: normal; font-weight: 400 650; font-display: swap; src: url("fonts/archivo-latin.woff2") format("woff2"); }
+@font-face { font-family: "Karla"; font-style: normal; font-weight: 400 650; font-display: swap; src: url("fonts/karla-latin.woff2") format("woff2"); }
+@font-face { font-family: "Roboto"; font-style: normal; font-weight: 400 650; font-display: swap; src: url("fonts/roboto-latin.woff2") format("woff2"); }
+@font-face { font-family: "Martel Sans"; font-style: normal; font-weight: 400; font-display: swap; src: url("fonts/martelsans-400-latin.woff2") format("woff2"); }
+@font-face { font-family: "Martel Sans"; font-style: normal; font-weight: 600; font-display: swap; src: url("fonts/martelsans-600-latin.woff2") format("woff2"); }
+@font-face { font-family: "Hind"; font-style: normal; font-weight: 400; font-display: swap; src: url("fonts/hind-400-latin.woff2") format("woff2"); }
+@font-face { font-family: "Hind"; font-style: normal; font-weight: 500; font-display: swap; src: url("fonts/hind-500-latin.woff2") format("woff2"); }
+@font-face { font-family: "Hind"; font-style: normal; font-weight: 600; font-display: swap; src: url("fonts/hind-600-latin.woff2") format("woff2"); }
+@font-face { font-family: "Atkinson Hyperlegible Next"; font-style: normal; font-weight: 400 650; font-display: swap; src: url("fonts/atkinsonhyperlegiblenext-latin.woff2") format("woff2"); }
+@font-face { font-family: "Newsreader"; font-style: normal; font-weight: 400 650; font-display: swap; src: url("fonts/newsreader-latin.woff2") format("woff2"); }
+@font-face { font-family: "Literata"; font-style: normal; font-weight: 400 650; font-display: swap; src: url("fonts/literata-latin.woff2") format("woff2"); }
+@font-face { font-family: "Noto Serif"; font-style: normal; font-weight: 400 650; font-display: swap; src: url("fonts/notoserif-latin.woff2") format("woff2"); }
+@font-face { font-family: "IBM Plex Serif"; font-style: normal; font-weight: 400; font-display: swap; src: url("fonts/ibmplexserif-400-latin.woff2") format("woff2"); }
+@font-face { font-family: "IBM Plex Serif"; font-style: normal; font-weight: 500; font-display: swap; src: url("fonts/ibmplexserif-500-latin.woff2") format("woff2"); }
+@font-face { font-family: "IBM Plex Serif"; font-style: normal; font-weight: 600; font-display: swap; src: url("fonts/ibmplexserif-600-latin.woff2") format("woff2"); }
+
+/* Leave room for the temporary review controls without splitting the footer. */
+.site-footer { padding-inline: 220px; }
+@media (max-width: 1000px) {
+  .site-footer { padding-inline: 0; padding-bottom: max(76px, env(safe-area-inset-bottom)); }
+}
+.font-review, .hf-review { font: var(--text-small)/1.5 var(--font); }
+.hf-review-heading h2 { font: 600 var(--text-section)/1.5 var(--font); }
+.hf-review-hint { font-size: var(--text-small); }
+.font-review { position: fixed; left: 20px; bottom: 18px; z-index: 999; max-width: min(240px, calc(100% - 150px)); color: #292929; }
+.font-review summary { display: flex; align-items: center; gap: 10px; cursor: pointer; list-style: none; padding: 8px 11px; border: 1px solid #b9b9b9; border-radius: 4px; background: #fff; }
+.font-review summary::-webkit-details-marker { display: none; }
+.font-review-current { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; color: #5b5b5b; }
+.font-review-panel { position: absolute; bottom: calc(100% + 10px); left: 0; width: min(300px, calc(100vw - 40px)); padding: 18px; background: #fff; border: 1px solid #d8d8d8; border-radius: 5px; box-shadow: 0 6px 24px #0001; }
+.font-review label { display: block; font-weight: 600; margin-bottom: 9px; }
+.font-review select { width: 100%; min-height: 44px; padding: 7px; border: 1px solid #999; border-radius: 3px; font: inherit; color: inherit; background: #fff; }
+.font-review summary, .font-review select, .hf-review button { font-weight: 500; }
+.font-review p { margin: 12px 0; }
+.font-review small { display: block; color: #5b5b5b; font-size: inherit; }
+.font-review summary:focus-visible, .font-review select:focus-visible { outline: 2px solid #246b64; outline-offset: 3px; }
+@media (max-width: 480px) {
+  .font-review summary { min-height: 44px; }
+  .font-review select { font-size: 16px; }
+}
+@media print {
+  .font-review { display: none; }
+  .site-footer { padding: 12px 0; }
+}

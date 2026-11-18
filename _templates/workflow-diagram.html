@@ -1,0 +1,63 @@
+<svg class="workflow-diagram" viewBox="0 0 1024 1024" role="img" aria-labelledby="recipe-diagram-title recipe-diagram-description" xmlns="http://www.w3.org/2000/svg">
+  <title id="recipe-diagram-title">Combine models and scripts</title>
+  <desc id="recipe-diagram-description">Three example recipes. Leydig nucleus and cell models feed a measurement script. Tubule and lumen models feed a script that selects tubule cross-sections, followed by tubule measurements. Spermatogenesis uses the same tubule preparation, then runs a cell model inside selected cross-sections and counts cells per tubule. These are research examples, not a visual workflow editor or a list of available modules.</desc>
+  <defs>
+    <marker id="recipe-arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M2 2 10 6 2 10" fill="none" stroke="#8a9c96" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+    </marker>
+  </defs>
+  <rect width="1024" height="1024" fill="#fbfcfb" />
+  <g font-family="var(--font)" fill="#243332">
+    <g font-size="26" fill="#53615f">
+      <rect x="56" y="50" width="20" height="20" rx="4" fill="#dceee8" stroke="#8fb7a8" />
+      <text x="90" y="70">Model</text>
+      <rect x="202" y="50" width="20" height="20" rx="4" fill="#fff" stroke="#9caea7" />
+      <text x="236" y="70">Script</text>
+      <text x="968" y="70" text-anchor="end">Example recipes</text>
+    </g>
+    <g font-size="32" font-weight="600">
+      <text x="56" y="146">Leydig cells</text>
+      <text x="56" y="400">Tubules</text>
+      <text x="56" y="754">Spermatogenesis</text>
+    </g>
+    <!-- Each model pair runs on the field; only the cell model uses selected parents. -->
+    <g fill="none" stroke="#8a9c96" stroke-width="2.5" marker-end="url(#recipe-arrow)">
+      <path d="M356 213H430V259H534" />
+      <path d="M356 305H430V259" marker-end="none" />
+      <path d="M356 467H398V515H442" />
+      <path d="M356 563H398V515" marker-end="none" />
+      <path d="M688 515H726" />
+      <path d="M566 575V706" />
+      <path d="M688 770H726" />
+    </g>
+    <g font-size="30" text-anchor="middle">
+      <g fill="#edf6f2" stroke="#b5d2c5" stroke-width="2">
+        <rect x="56" y="177" width="300" height="72" rx="10" />
+        <rect x="56" y="269" width="300" height="72" rx="10" />
+        <rect x="56" y="431" width="300" height="72" rx="10" />
+        <rect x="56" y="527" width="300" height="72" rx="10" />
+        <rect x="452" y="718" width="236" height="104" rx="10" />
+      </g>
+      <g fill="#fff" stroke="#cbd7d1" stroke-width="2">
+        <rect x="544" y="207" width="424" height="104" rx="10" />
+        <rect x="452" y="463" width="236" height="104" rx="10" />
+        <rect x="736" y="463" width="232" height="104" rx="10" />
+        <rect x="736" y="718" width="232" height="104" rx="10" />
+      </g>
+      <text x="206" y="223">Leydig nuclei</text>
+      <text x="206" y="315">Leydig cells</text>
+      <text x="756" y="250"><tspan x="756">Cell counts</tspan><tspan x="756" dy="36">and measurements</tspan></text>
+      <text x="206" y="477">Tubules</text>
+      <text x="206" y="573">Lumens</text>
+      <text x="570" y="506"><tspan x="570">Select</tspan><tspan x="570" dy="36">cross-sections</tspan></text>
+      <text x="852" y="506"><tspan x="852">Tubule</tspan><tspan x="852" dy="36">measurements</tspan></text>
+      <text x="570" y="761"><tspan x="570">Cells within</tspan><tspan x="570" dy="36">each tubule</tspan></text>
+      <text x="852" y="761"><tspan x="852">Cell counts</tspan><tspan x="852" dy="36">per tubule</tspan></text>
+    </g>
+    <g font-size="26" fill="#53615f">
+      <text x="590" y="652">Selected cross-sections</text>
+      <text x="56" y="796"><tspan x="56">Reuses the selected</tspan><tspan x="56" dy="34">cross-sections above.</tspan></text>
+      <text x="56" y="954">Research examples · Models not yet released</text>
+    </g>
+  </g>
+</svg>
